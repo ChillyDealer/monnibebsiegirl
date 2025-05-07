@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Pictures/heart.png" />
+    <title>Monica x Greg</title>
+    <link rel="stylesheet" href="style_monica.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <div id="login-form" class="login-form">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="login-error" class="hidden">Incorrect username or password.</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="loader" class="loader hidden">
+        <div class="BigHeart"></div>
+        <div class="loader-text">I love youuu Skibidi</div>
+    </div>
+
+    <div id="particles-js" class="hidden"></div>
+    <div class="container hidden">
+        <h1>Tusind tak Monica for de bedste:</h1>
+        <div id="countdown">
+            <span id="days">0</span> Dage <span id="hours">0</span> Timer
+            <span id="minutes">0</span> Minutter
+            <span>og</span>
+            <span id="seconds">0</span> Sekunder
+        </div>
+
+      <div class="buttons">
+        <button class="month-btn" data-month="september">September</button>
+        <button class="month-btn" data-month="oktober">Oktober</button>
+        <button class="month-btn" data-month="november">November</button>
+        <button class="month-btn" data-month="december">December</button>
+        <button class="month-btn" data-month="januar">Januar</button>
+        <button class="month-btn" data-month="februar">Februar</button>
+        <button class="month-btn" data-month="marts">Marts</button>
+        <button class="month-btn" data-month="april">April</button>
+        <button class="month-btn" data-month="maj">Maj</button>
+        <button class="month-btn" data-month="juni">Juni</button>
+        <button class="month-btn" data-month="juli">Juli</button>
+        <button class="month-btn" data-month="august">August</button>
+      </div>
+
+      <div id="images" class="images-container"></div>
+    </div>
+
+    <div id="lighthouse" class="hidden">
+      <span id="close">&times;</span>
+      <img id="lighthouse-img" src="" alt="Fullscreen Image" />
+    </div>
+
+    <script src="script_monica.js"></script>
+  </body>
+</html>
