@@ -68,8 +68,12 @@ const pictures = {
     (_, i) => `Pictures/november/november${i + 1}.jpg`
   ),
   december: Array.from(
-    { length: 10 },
+    { length: 29 },
     (_, i) => `Pictures/december/december${i + 1}.jpg`
+  ),
+  january: Array.from(
+    { length: 77 },
+    (_, i) => `Pictures/january/January${i + 1}.jpg`
   ),
 }; // see in folder after var
 
