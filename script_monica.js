@@ -94,15 +94,15 @@ const pictures = {
     { length: 29 },
     (_, i) => `Pictures/december/december${i + 1}.jpg`
   ),
-  january: Array.from(
+  januar: Array.from(
     { length: 77 },
     (_, i) => `Pictures/january/January${i + 1}.jpg`
   ),
-  february: Array.from(
+  februar: Array.from(
     { length: 40 },
     (_, i) => `Pictures/february/February${i + 1}.jpg`
   ),
-  march: Array.from(
+  marts: Array.from(
     { length: 31 },
     (_, i) => `Pictures/march/March${i + 1}.jpg`
   ),
