@@ -1,4 +1,22 @@
-// login + loader
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyBaT3f4u6e1KH-Y6SKre1zSKGwl7Jb_ceI",
+  authDomain: "monnihoney.firebaseapp.com",
+  projectId: "monnihoney",
+  storageBucket: "monnihoney.firebasestorage.app",
+  messagingSenderId: "942467588425",
+  appId: "1:942467588425:web:9f758aeba0e465699f7a98",
+  measurementId: "G-VT11XHDN3C"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Login + Loader logic
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login");
   const loginContainer = document.getElementById("login-form");
@@ -8,25 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginError = document.getElementById("login-error");
 
   loginForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+    event.preventDefault();
 
-      if (username === "skibidi" && password === "270304") { // only login
-          loginContainer.classList.add("hidden");
-          loader.classList.remove("hidden");
-          
-          setTimeout(() => {
-              loader.classList.add("hidden");
-              particles.classList.remove("hidden");
-              container.classList.remove("hidden");
-              document.body.classList.add("fade-in");
-          }, 5800);
-      } else {
-          loginError.classList.remove("hidden");
-      }
+    const email = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        loginContainer.classList.add("hidden");
+        loader.classList.remove("hidden");
+
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          particles.classList.remove("hidden");
+          container.classList.remove("hidden");
+          document.body.classList.add("fade-in");
+        }, 5800);
+      })
+      .catch((error) => {
+        console.error("Login failed:", error.message);
+        loginError.classList.remove("hidden");
+      });
   });
 });
+
 
 
 // countdown timer
