@@ -106,6 +106,14 @@ const pictures = {
     { length: 31 },
     (_, i) => `Pictures/march/March${i + 1}.jpg`
   ),
+  april: Array.from(
+    { length: 43 },
+    (_, i) => `Pictures/april/April${i + 1}.jpg`
+  ),
+  maj: Array.from(
+    { length: 9 },
+    (_, i) => `Pictures/maj/May${i + 1}.jpg`
+  ),
 }; // see in folder after var
 
 // inactive dates
